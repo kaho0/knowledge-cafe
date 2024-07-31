@@ -4,6 +4,7 @@ import { FaBookmark } from "@react-icons/all-files/fa/FaBookmark";
 
 const Blog = ({ blog, handleAddToBookMark, handleMarkAsRead }) => {
   const {
+    id,
     title,
     cover,
     author,
@@ -50,8 +51,7 @@ const Blog = ({ blog, handleAddToBookMark, handleMarkAsRead }) => {
       </p>
       <button
         onClick={() => {
-          console.log("Mark as read clicked", reading_time);
-          handleMarkAsRead(reading_time);
+          handleMarkAsRead(id, reading_time);
         }}
         className="underline font-bold"
       >
